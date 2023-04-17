@@ -15,29 +15,4 @@ int main()
     for(i=0;i<=n;i++){
         printf("[%d]",a[i]);
     }
-    printf("\n");
-    int m=0,count=0;
-    for(m=0;m<=n;m++){
-        if (a[m]==1){
-        count=count+1;
-           if(count==6){
-                x=0;
-                pos=m;
-                n++;
-                for (m = n; m >= pos; m--){
-                    a[m] = a[m - 1];
-                }
-                count=0;
-                a[pos] = x;
-            }
-        }
-        if(a[m]==0){
-            count=0;
-        }
-    
-    }
-    for(i=0;i<=n;i++){
-        printf("[%d]",a[i]);
-    }
-    return 0;
-}
+   
