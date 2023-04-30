@@ -40,3 +40,17 @@ int main()
 	printf("\nreceived code word contains errors...\n");	
 }
 
+void check()
+{
+    for(j=0;j<divlen;j++)
+        data[j]=total[j];
+    while(j<=len)
+	{
+        if(data[0]=='1')				
+            for(i = 1;i <divlen ; i++)
+   				data[i] = (( data[i] == div[i])?'0':'1');
+        for(i=0;i<divlen-1;i++)			
+            data[i]=data[i+1];
+        data[i]=total[j++];			
+    }
+}
